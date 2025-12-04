@@ -32,3 +32,35 @@ export interface QuickRefCategory {
   title: string;
   commands: { cmd: string; purpose: string }[];
 }
+
+export interface AppData {
+  modules: ModuleData[];
+  quickRef: QuickRefCategory[];
+  ui: {
+    title: string;
+    subtitle: string;
+    searchPlaceholder: string;
+    searchResults: string;
+    noResults: string;
+    quickRef: string;
+    quickRefDesc: string;
+    modules: string;
+    footer: string;
+    about: string;
+    aboutDesc: string;
+    creator: string;
+    tabs: {
+      syntax: string;
+      options: string;
+      examples: string;
+    };
+    labels: {
+      desc: string;
+      syntax: string;
+      flag: string;
+      example: string;
+      output: string;
+      note: string;
+    }
+  }
+}

@@ -5,23 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Linux Mastery Guide</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Inter:wght@400;500;600;700;800&family=Vazirmatn:wght@400;500;600;700&display=swap" rel="stylesheet">
     <script>
       tailwind.config = {
+        darkMode: 'class',
         theme: {
           extend: {
             fontFamily: {
-              sans: ['Inter', 'sans-serif'],
+              sans: ['Inter', 'Vazirmatn', 'sans-serif'],
               mono: ['JetBrains Mono', 'monospace'],
             },
             colors: {
-              linux: {
-                dark: '#0f172a',
+              primary: {
+                50: '#f5f3ff',
+                100: '#ede9fe',
+                500: '#8b5cf6',
+                600: '#7c3aed',
+                700: '#6d28d9',
+              },
+              dark: {
+                bg: '#0f172a',
                 card: '#1e293b',
-                accent: '#10b981', // Emerald
-                secondary: '#8b5cf6', // Violet
-                text: '#e2e8f0',
-                muted: '#94a3b8'
+                border: '#334155'
               }
             }
           }
@@ -29,9 +34,9 @@
       }
     </script>
     <style>
+      /* Smooth transitions for theme switching */
       body {
-        background-color: #0f172a;
-        color: #e2e8f0;
+        transition: background-color 0.3s ease, color 0.3s ease;
       }
       /* Custom scrollbar */
       ::-webkit-scrollbar {
@@ -39,14 +44,25 @@
         height: 8px;
       }
       ::-webkit-scrollbar-track {
-        background: #0f172a; 
+        background: transparent; 
       }
       ::-webkit-scrollbar-thumb {
-        background: #334155; 
+        background: #cbd5e1; 
         border-radius: 4px;
       }
+      .dark ::-webkit-scrollbar-thumb {
+        background: #334155; 
+      }
       ::-webkit-scrollbar-thumb:hover {
+        background: #94a3b8; 
+      }
+      .dark ::-webkit-scrollbar-thumb:hover {
         background: #475569; 
+      }
+      
+      /* RTL specific utility if needed */
+      [dir="rtl"] {
+        text-align: right;
       }
     </style>
   <script type="importmap">
