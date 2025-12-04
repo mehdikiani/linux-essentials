@@ -33,6 +33,7 @@ export interface QuickRefCategory {
   commands: { cmd: string; purpose: string }[];
 }
 
+<<<<<<< HEAD
 export interface AppData {
   modules: ModuleData[];
   quickRef: QuickRefCategory[];
@@ -64,3 +65,11 @@ export interface AppData {
     }
   }
 }
+=======
+
+
+
+
+
+
+>>>>>>> cb9d2c7ded7e8da36aea0a0780cede0df23e0468
